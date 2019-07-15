@@ -1,0 +1,35 @@
+- service
+  - ファイルの置き方
+  - serviceの設定変更
+- Consoleログに出力しているSpringBootのバナーをServerログに週力する方法
+- java heap量の見積もり
+■CMS
+https://www.slideshare.net/YujiKubota/concurrent-marksweep-garbage-collection
+
+■G1GC
+https://x1.inkenkun.com/archives/5506
+https://qiita.com/tshk_mtsys/items/5a027fe00b3bff009b17
+https://www.sakatakoichi.com/entry/2017/12/21/190000
+https://matsumana.info/blog/2018/12/09/java11-g1gc-default/
+
+spring.main.banner-mode=console # Mode used to display the banner when the application runs.
+→ "log"に変更、起動オプション -Dspring.main.banner-mode=log を追加する方針
+
+他に検討をしないといけないパラメータ
+■Tomcat  →　この辺りは外出パラメータにするか・・・
+server.tomcat.accept-count=100 # Maximum queue length for incoming connection requests when all possible request processing threads are in use.
+server.tomcat.max-connections=10000 # Maximum number of connections that the server accepts and processes at any given time.
+server.tomcat.max-http-post-size=2MB # Maximum size of the HTTP post content.
+server.tomcat.max-swallow-size=2MB # Maximum amount of request body to swallow.
+server.tomcat.max-threads=200 # Maximum amount of worker threads.
+server.tomcat.min-spare-threads=10 # Minimum amount of worker threads.
+-Dspring.addtional-location=tomcat
+
+■Multipart
+# MULTIPART (MultipartProperties)
+spring.servlet.multipart.enabled=true # Whether to enable support of multipart uploads.
+spring.servlet.multipart.file-size-threshold=0B # Threshold after which files are written to disk.
+spring.servlet.multipart.location= # Intermediate location of uploaded files.
+spring.servlet.multipart.max-file-size=1MB # Max file size.
+spring.servlet.multipart.max-request-size=10MB # Max request size.
+spring.servlet.multipart.resolve-lazily=false # Whether to resolve the multipart request lazily at the time of file or parameter access.
