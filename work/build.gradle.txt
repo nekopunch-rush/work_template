@@ -1,0 +1,21 @@
+  ____             _             ____              _
+ / ___| _ __  _ __(_)_ __   __ _| __ )  ___   ___ | |_
+ \___ \| '_ \| '__| | '_ \ / _` |  _ \ / _ \ / _ \| __|
+  ___) | |_) | |  | | | | | (_| | |_) | (_) | (_) | |_
+ |____/| .__/|_|  |_|_| |_|\__, |____/ \___/ \___/ \__|
+       |_|                 |___/
+  :: Spring Boot ::     ${spring-boot.version}
+  :: Application ::     ${application.title} version ${application.version}
+
+
+<<追加事項>>
+bootJar{
+	manifest {
+		attributes 'Implementation-Version': version
+		attributes 'Implementation-Title': 'demo-app'
+	}
+}
+
+
+
+
