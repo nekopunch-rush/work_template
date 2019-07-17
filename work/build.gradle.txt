@@ -17,5 +17,9 @@ bootJar{
 }
 
 
-
-
+https://docs.spring.io/spring-boot/docs/current/reference/html/deployment-install.html
+https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-spring-application.html
+https://qiita.com/5at00001040/items/15e774b8c7b6a8fb93c7
+https://plugins.jetbrains.com/plugin/12005-figlet
+https://blog.jetbrains.com/jp/2016/02/11/607
+http://shibuya-3percent.hatenablog.com/entry/2016/04/17/013926
